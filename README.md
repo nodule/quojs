@@ -1,2 +1,2 @@
-skeleton
+QuoJS for Chiχ
 ========
