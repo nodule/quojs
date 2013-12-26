@@ -1,0 +1,29 @@
+{
+  "name": "style",
+  "ns": "quojs",
+  "description": "QuoJS style",
+  "phrases": {
+    "active": "Styling element {{input.property}}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "property": {
+        "title": "Property",
+        "type": "string",
+        "required": true
+      },
+      "value": {
+        "title": "Value",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

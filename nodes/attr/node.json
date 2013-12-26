@@ -1,0 +1,28 @@
+{
+  "name": "attr",
+  "ns": "quojs",
+  "description": "QuoJS attr",
+  "phrases": {
+    "active": "Getting Attribute {input.attribute}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "attribute": {
+        "title": "Attribute",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+      "value": {
+        "title": "Value",
+        "type": "string"
+      }
+    }
+  }
+}

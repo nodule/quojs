@@ -1,0 +1,23 @@
+{
+  "name": "val",
+  "ns": "quojs",
+  "description": "QuoJS val",
+  "phrases": {
+    "active": "Getting Value"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      }
+    },
+    "output": {
+      "value": {
+        "title": "Value",
+        "type": "any"
+      }
+    }
+  }
+}

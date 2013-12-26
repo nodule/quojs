@@ -1,0 +1,28 @@
+{
+  "name": "data",
+  "ns": "quojs",
+  "description": "QuoJS data",
+  "phrases": {
+    "active": "Getting Data {input.name}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+      "value": {
+        "title": "Value",
+        "type": "any"
+      }
+    }
+  }
+}

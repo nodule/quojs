@@ -1,0 +1,24 @@
+{
+  "name": "setHtml",
+  "ns": "quojs",
+  "description": "QuoJS setHtml",
+  "phrases": {
+    "active": "Setting element's HTML"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "html": {
+        "title": "HTML",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

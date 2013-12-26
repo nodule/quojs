@@ -1,0 +1,19 @@
+{
+  "name": "hide",
+  "ns": "quojs",
+  "description": "QuoJS Hide",
+  "phrases": {
+    "active": "Hiding"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

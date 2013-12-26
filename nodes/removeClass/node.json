@@ -1,0 +1,24 @@
+{
+  "name": "removeClass",
+  "ns": "quojs",
+  "description": "QuoJS removeClass",
+  "phrases": {
+    "active": "Removing class {input.className}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "className": {
+        "title": "Class Name",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

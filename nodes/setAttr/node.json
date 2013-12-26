@@ -1,0 +1,29 @@
+{
+  "name": "setAttr",
+  "ns": "quojs",
+  "description": "QuoJS setAttr",
+  "phrases": {
+    "active": "Setting Attribute {input.attribute}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "attribute": {
+        "title": "Attribute",
+        "type": "string",
+        "required": true
+      },
+      "value": {
+        "title": "Value",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

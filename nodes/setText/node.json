@@ -1,0 +1,24 @@
+{
+  "name": "setText",
+  "ns": "quojs",
+  "description": "QuoJS setText",
+  "phrases": {
+    "active": "Setting element's text"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "text": {
+        "title": "Text",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

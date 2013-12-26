@@ -1,0 +1,24 @@
+{
+  "name": "setVal",
+  "ns": "quojs",
+  "description": "QuoJS setVal",
+  "phrases": {
+    "active": "Setting Value"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "value": {
+        "title": "Value",
+        "type": "any",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

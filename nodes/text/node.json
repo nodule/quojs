@@ -1,0 +1,24 @@
+{
+  "name": "text",
+  "ns": "quojs",
+  "description": "QuoJS text",
+  "phrases": {
+    "active": "Getting element's text"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      }
+    },
+    "output": {
+      "text": {
+        "title": "text",
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

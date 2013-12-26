@@ -1,0 +1,571 @@
+{
+  "name": "quojs",
+  "description": "QuoJS for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/quojs.git"
+  },
+  "dependencies": {
+    "quoque": "psichi/quoque"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "className": {
+            "title": "Class Name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Adding class {input.className}"
+      },
+      "description": "QuoJS addClass",
+      "ns": "quojs",
+      "name": "addClass",
+      "fn": "input.selection.addClass(input.className)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "attribute": {
+            "title": "Attribute",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "value": {
+            "title": "Value",
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Attribute {input.attribute}"
+      },
+      "description": "QuoJS attr",
+      "ns": "quojs",
+      "name": "attr",
+      "fn": "output.value = input.selection.attr(input.attribute)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "value": {
+            "title": "Value",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Data {input.name}"
+      },
+      "description": "QuoJS data",
+      "ns": "quojs",
+      "name": "data",
+      "fn": "output.value = input.selection.data(input.name)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "className": {
+            "title": "Class Name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "ok": {
+            "title": "OK?",
+            "type": "boolean",
+            "required": true
+          }
+        }
+      },
+      "phrases": {
+        "active": "Determining whether object has class {input.className}"
+      },
+      "description": "QuoJS hasClass",
+      "ns": "quojs",
+      "name": "hasClass",
+      "fn": "output.ok = input.selection.hasClass(input.className)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "height": {
+            "title": "Height",
+            "type": "number",
+            "required": true
+          }
+        }
+      },
+      "phrases": {
+        "active": "Measuring Height"
+      },
+      "description": "QuoJS Height",
+      "ns": "quojs",
+      "name": "height",
+      "fn": "output.height = input.selection.height()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Hiding"
+      },
+      "description": "QuoJS Hide",
+      "ns": "quojs",
+      "name": "hide",
+      "fn": "input.selection.hide()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "html": {
+            "title": "HTML",
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting element's HTML"
+      },
+      "description": "QuoJS html",
+      "ns": "quojs",
+      "name": "html",
+      "fn": "output.html = input.selection.html()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Removing element(s)"
+      },
+      "description": "QuoJS remove",
+      "ns": "quojs",
+      "name": "remove",
+      "fn": "input.selection.remove()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "className": {
+            "title": "Class Name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Removing class {input.className}"
+      },
+      "description": "QuoJS removeClass",
+      "ns": "quojs",
+      "name": "removeClass",
+      "fn": "input.selection.removeClass(input.className)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selector": {
+            "title": "Selector",
+            "type": "any",
+            "required": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Selection",
+            "type": "object"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Selecting {input.selector}"
+      },
+      "require": {
+        "quoque": "latest"
+      },
+      "description": "QuoJS selector",
+      "ns": "quojs",
+      "name": "select",
+      "fn": "output.selection = quoque(input.selector)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "attribute": {
+            "title": "Attribute",
+            "type": "string",
+            "required": true
+          },
+          "value": {
+            "title": "Value",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Setting Attribute {input.attribute}"
+      },
+      "description": "QuoJS setAttr",
+      "ns": "quojs",
+      "name": "setAttr",
+      "fn": "input.selection.attr(input.attribute, input.value)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "required": true
+          },
+          "value": {
+            "title": "Value",
+            "type": "any",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Setting Data {input.name}"
+      },
+      "description": "QuoJS setData",
+      "ns": "quojs",
+      "name": "setData",
+      "fn": "input.selection.data(input.name, input.value)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "html": {
+            "title": "HTML",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Setting element's HTML"
+      },
+      "description": "QuoJS setHtml",
+      "ns": "quojs",
+      "name": "setHtml",
+      "fn": "input.selection.html(input.html)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "text": {
+            "title": "Text",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Setting element's text"
+      },
+      "description": "QuoJS setText",
+      "ns": "quojs",
+      "name": "setText",
+      "fn": "input.selection.text(input.text)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "value": {
+            "title": "Value",
+            "type": "any",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Setting Value"
+      },
+      "description": "QuoJS setVal",
+      "ns": "quojs",
+      "name": "setVal",
+      "fn": "input.selection.val(input.value)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Showing"
+      },
+      "description": "QuoJS show",
+      "ns": "quojs",
+      "name": "show",
+      "fn": "input.selection.show()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "property": {
+            "title": "Property",
+            "type": "string",
+            "required": true
+          },
+          "value": {
+            "title": "Value",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Styling element {{input.property}}"
+      },
+      "description": "QuoJS style",
+      "ns": "quojs",
+      "name": "style",
+      "fn": "input.selection.style(input.property, input.value)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "text": {
+            "title": "text",
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting element's text"
+      },
+      "description": "QuoJS text",
+      "ns": "quojs",
+      "name": "text",
+      "fn": "output.text = input.selection.text()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "className": {
+            "title": "Class Name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Toggling class {input.className}"
+      },
+      "description": "QuoJS toggleClass",
+      "ns": "quojs",
+      "name": "toggleClass",
+      "fn": "input.selection.toggleClass(input.className)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "value": {
+            "title": "Value",
+            "type": "any"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting Value"
+      },
+      "description": "QuoJS val",
+      "ns": "quojs",
+      "name": "val",
+      "fn": "output.value = input.selection.val()\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          },
+          "property": {
+            "title": "Property",
+            "type": "string",
+            "required": true
+          },
+          "value": {
+            "title": "Value",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Applying {{input.property}} to element"
+      },
+      "description": "QuoJS vendor",
+      "ns": "quojs",
+      "name": "vendor",
+      "fn": "input.selection.vendor(input.property, input.value)\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "selection": {
+            "title": "Selection",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "width": {
+            "title": "width",
+            "type": "number",
+            "required": true
+          }
+        }
+      },
+      "phrases": {
+        "active": "Measuring width"
+      },
+      "description": "QuoJS width",
+      "ns": "quojs",
+      "name": "width",
+      "fn": "output.width = input.selection.width()\n"
+    }
+  ],
+  "twigs": []
+}

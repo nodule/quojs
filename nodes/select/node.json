@@ -1,0 +1,26 @@
+{
+  "name": "select",
+  "ns": "quojs",
+  "description": "QuoJS selector",
+  "require": {
+    "quoque": "latest"
+  },
+  "phrases": {
+    "active": "Selecting {input.selector}"
+  },
+  "ports": {
+    "input": {
+      "selector": {
+        "title": "Selector",
+        "type": "any",
+        "required": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Selection",
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "setData",
+  "ns": "quojs",
+  "description": "QuoJS setData",
+  "phrases": {
+    "active": "Setting Data {input.name}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true
+      },
+      "value": {
+        "title": "Value",
+        "type": "any",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

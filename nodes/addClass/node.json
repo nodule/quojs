@@ -1,0 +1,24 @@
+{
+  "name": "addClass",
+  "ns": "quojs",
+  "description": "QuoJS addClass",
+  "phrases": {
+    "active": "Adding class {input.className}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "className": {
+        "title": "Class Name",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

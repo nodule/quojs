@@ -1,0 +1,29 @@
+{
+  "name": "hasClass",
+  "ns": "quojs",
+  "description": "QuoJS hasClass",
+  "phrases": {
+    "active": "Determining whether object has class {input.className}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "className": {
+        "title": "Class Name",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+      "ok": {
+        "title": "OK?",
+        "type": "boolean",
+        "required": true
+      }
+    }
+  }
+}

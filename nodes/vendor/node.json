@@ -1,0 +1,29 @@
+{
+  "name": "vendor",
+  "ns": "quojs",
+  "description": "QuoJS vendor",
+  "phrases": {
+    "active": "Applying {{input.property}} to element"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "property": {
+        "title": "Property",
+        "type": "string",
+        "required": true
+      },
+      "value": {
+        "title": "Value",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "height",
+  "ns": "quojs",
+  "description": "QuoJS Height",
+  "phrases": {
+    "active": "Measuring Height"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      }
+    },
+    "output": {
+      "height": {
+        "title": "Height",
+        "type": "number",
+        "required": true
+      }
+    }
+  }
+}

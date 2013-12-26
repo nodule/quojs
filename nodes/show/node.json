@@ -1,0 +1,19 @@
+{
+  "name": "show",
+  "ns": "quojs",
+  "description": "QuoJS show",
+  "phrases": {
+    "active": "Showing"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}

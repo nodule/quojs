@@ -1,12 +1,12 @@
 {
-  "name": "nodule-skeleton",
-  "description": "Skeleton Template for Chiχ nodules",
+  "name": "nodule-quojs",
+  "description": "QuoJS for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
   "version": "0.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodule/skeleton.git"
+    "url": "https://github.com/nodule/quojs.git"
   },
   "engines": {
     "node": ">=0.6.0"
@@ -15,11 +15,14 @@
   "scripts": {
     "test": "chit -r"
   },
+  "dependencies": {
+    "quoque": "psichi/quoque"
+  },
   "devDependencies": {
     "chit": "0.x.x"
   },
   "chix": {
-    "name": "skeleton",
+    "name": "quojs",
     "color": "rgb(25,116,136)"
   }
 }

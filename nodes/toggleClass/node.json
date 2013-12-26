@@ -1,0 +1,24 @@
+{
+  "name": "toggleClass",
+  "ns": "quojs",
+  "description": "QuoJS toggleClass",
+  "phrases": {
+    "active": "Toggling class {input.className}"
+  },
+  "ports": {
+    "input": {
+      "selection": {
+        "title": "Selection",
+        "type": "object",
+        "required": true
+      },
+      "className": {
+        "title": "Class Name",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}
