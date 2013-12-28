@@ -9,7 +9,7 @@
     "input": {
       "selection": {
         "title": "Selection",
-        "type": "object",
+        "type": "any",
         "required": true
       },
       "text": {

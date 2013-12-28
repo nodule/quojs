@@ -3,8 +3,9 @@
   "ns": "quojs",
   "description": "QuoJS selector",
   "require": {
-    "quoque": "latest"
+    "quoque": "psichi/quoque"
   },
+  "expose": ["window", "document"],
   "phrases": {
     "active": "Selecting {input.selector}"
   },
