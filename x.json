@@ -235,6 +235,11 @@
       "fn": "input.selection.removeClass(input.className)\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "quoque": "psichi/quoque"
+        }
+      },
       "ports": {
         "input": {
           "selector": {
@@ -257,9 +262,6 @@
         "window",
         "document"
       ],
-      "require": {
-        "quoque": "psichi/quoque"
-      },
       "description": "QuoJS selector",
       "ns": "quojs",
       "name": "select",

@@ -2,10 +2,10 @@
   "name": "select",
   "ns": "quojs",
   "description": "QuoJS selector",
-  "require": {
-    "quoque": "psichi/quoque"
-  },
-  "expose": ["window", "document"],
+  "expose": [
+    "window",
+    "document"
+  ],
   "phrases": {
     "active": "Selecting {input.selector}"
   },
@@ -22,6 +22,11 @@
         "title": "Selection",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "quoque": "psichi/quoque"
     }
   }
 }
