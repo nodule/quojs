@@ -1,1 +1,1 @@
-output.selection = quoque(input.selector)
+output.selection = quoque($.selector)
