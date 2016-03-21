@@ -1,1 +1,1 @@
-output.html = input.selection.html()
+output.html = $.create($.selection.html())

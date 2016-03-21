@@ -1,1 +1,1 @@
-input.selection.html(input.html)
+$.selection.html($.html)

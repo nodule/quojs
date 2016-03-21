@@ -1,1 +1,1 @@
-input.selection.addClass(input.className)
+$.selection.addClass($.className)

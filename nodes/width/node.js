@@ -1,1 +1,1 @@
-output.width = input.selection.width()
+output.width = $.create($.selection.width())

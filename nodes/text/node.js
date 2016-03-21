@@ -1,1 +1,1 @@
-output.text = input.selection.text()
+output.text = $.selection.text()

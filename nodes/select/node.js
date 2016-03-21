@@ -1,1 +1,1 @@
-output.selection = quoque($.selector)
+output.selection = $.create(quoque($.selector))

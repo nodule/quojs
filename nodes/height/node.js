@@ -1,1 +1,1 @@
-output.height = input.selection.height()
+output.height = $.create($.selection.height())

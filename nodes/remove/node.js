@@ -1,1 +1,1 @@
-input.selection.remove()
+$.selection.remove()

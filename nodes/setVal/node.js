@@ -1,1 +1,1 @@
-input.selection.val(input.value)
+$.selection.val($.value)

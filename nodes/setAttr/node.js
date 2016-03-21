@@ -1,1 +1,1 @@
-input.selection.attr(input.attribute, input.value)
+$.selection.attr($.attribute, $.value)

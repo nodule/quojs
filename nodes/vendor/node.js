@@ -1,1 +1,1 @@
-input.selection.vendor(input.property, input.value)
+$.selection.vendor($.property, $.value)

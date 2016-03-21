@@ -1,1 +1,1 @@
-input.selection.style(input.property, input.value)
+$.selection.style($.property, $.value)

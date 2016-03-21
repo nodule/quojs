@@ -1,1 +1,1 @@
-input.selection.toggleClass(input.className)
+$.selection.toggleClass($.className)

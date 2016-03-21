@@ -1,1 +1,1 @@
-input.selection.removeClass(input.className)
+$.selection.removeClass($.className)

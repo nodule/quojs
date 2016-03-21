@@ -1,1 +1,1 @@
-input.selection.show()
+$.selection.show()

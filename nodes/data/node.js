@@ -1,1 +1,1 @@
-output.value = input.selection.data(input.name)
+output.value = $.create($.selection.data($.name))

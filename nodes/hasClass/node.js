@@ -1,1 +1,1 @@
-output.ok = input.selection.hasClass(input.className)
+output.ok = $.create($.selection.hasClass($.className))

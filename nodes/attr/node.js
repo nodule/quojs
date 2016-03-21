@@ -1,1 +1,1 @@
-output.value = input.selection.attr(input.attribute)
+output.value = $.create($.selection.attr($.attribute))

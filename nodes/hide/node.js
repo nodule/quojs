@@ -1,1 +1,1 @@
-input.selection.hide()
+$.selection.hide()
