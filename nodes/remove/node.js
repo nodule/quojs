@@ -1,1 +1,3 @@
-$.selection.remove()
+output = function() {
+  $.selection.remove()
+}

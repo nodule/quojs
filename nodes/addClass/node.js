@@ -1,1 +1,4 @@
-$.selection.addClass($.className)
+output = function() {
+  $.selection.addClass($.className)
+  done()
+}

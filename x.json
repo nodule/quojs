@@ -32,7 +32,7 @@
       "description": "QuoJS addClass",
       "ns": "quojs",
       "name": "addClass",
-      "fn": "input.selection.addClass(input.className)\n"
+      "fn": "output = function() {\n  $.selection.addClass($.className)\n  done()\n}\n"
     },
     {
       "ports": {
@@ -61,7 +61,7 @@
       "description": "QuoJS attr",
       "ns": "quojs",
       "name": "attr",
-      "fn": "output.value = input.selection.attr(input.attribute)\n"
+      "fn": "output.value = $.create($.selection.attr($.attribute))\n"
     },
     {
       "ports": {
@@ -90,7 +90,7 @@
       "description": "QuoJS data",
       "ns": "quojs",
       "name": "data",
-      "fn": "output.value = input.selection.data(input.name)\n"
+      "fn": "output.value = $.create($.selection.data($.name))\n"
     },
     {
       "ports": {
@@ -120,7 +120,7 @@
       "description": "QuoJS hasClass",
       "ns": "quojs",
       "name": "hasClass",
-      "fn": "output.ok = input.selection.hasClass(input.className)\n"
+      "fn": "output.ok = $.create($.selection.hasClass($.className))\n"
     },
     {
       "ports": {
@@ -145,7 +145,7 @@
       "description": "QuoJS Height",
       "ns": "quojs",
       "name": "height",
-      "fn": "output.height = input.selection.height()\n"
+      "fn": "output.height = $.create($.selection.height())\n"
     },
     {
       "ports": {
@@ -164,7 +164,7 @@
       "description": "QuoJS Hide",
       "ns": "quojs",
       "name": "hide",
-      "fn": "input.selection.hide()\n"
+      "fn": "output = function() {\n  $.selection.hide()\n}\n"
     },
     {
       "ports": {
@@ -189,7 +189,7 @@
       "description": "QuoJS html",
       "ns": "quojs",
       "name": "html",
-      "fn": "output.html = input.selection.html()\n"
+      "fn": "output.html = $.create($.selection.html())\n"
     },
     {
       "ports": {
@@ -208,7 +208,7 @@
       "description": "QuoJS remove",
       "ns": "quojs",
       "name": "remove",
-      "fn": "input.selection.remove()\n"
+      "fn": "output = function() {\n  $.selection.remove()\n}\n"
     },
     {
       "ports": {
@@ -232,7 +232,7 @@
       "description": "QuoJS removeClass",
       "ns": "quojs",
       "name": "removeClass",
-      "fn": "input.selection.removeClass(input.className)\n"
+      "fn": "$.selection.removeClass($.className)\n"
     },
     {
       "dependencies": {
@@ -265,7 +265,7 @@
       "description": "QuoJS selector",
       "ns": "quojs",
       "name": "select",
-      "fn": "output.selection = quoque(input.selector)\n"
+      "fn": "output.selection = $.create(quoque($.selector))\n"
     },
     {
       "ports": {
@@ -294,7 +294,7 @@
       "description": "QuoJS setAttr",
       "ns": "quojs",
       "name": "setAttr",
-      "fn": "input.selection.attr(input.attribute, input.value)\n"
+      "fn": "$.selection.attr($.attribute, $.value)\n"
     },
     {
       "ports": {
@@ -323,7 +323,7 @@
       "description": "QuoJS setData",
       "ns": "quojs",
       "name": "setData",
-      "fn": "input.selection.data(input.name, input.value)\n"
+      "fn": "$.selection.data($.name, $.value)\n"
     },
     {
       "ports": {
@@ -347,7 +347,7 @@
       "description": "QuoJS setHtml",
       "ns": "quojs",
       "name": "setHtml",
-      "fn": "input.selection.html(input.html)\n"
+      "fn": "$.selection.html($.html)\n"
     },
     {
       "ports": {
@@ -371,7 +371,7 @@
       "description": "QuoJS setText",
       "ns": "quojs",
       "name": "setText",
-      "fn": "input.selection.text(input.text)\n"
+      "fn": "$.selection.text($.text)\n"
     },
     {
       "ports": {
@@ -395,7 +395,7 @@
       "description": "QuoJS setVal",
       "ns": "quojs",
       "name": "setVal",
-      "fn": "input.selection.val(input.value)\n"
+      "fn": "$.selection.val($.value)\n"
     },
     {
       "ports": {
@@ -414,7 +414,7 @@
       "description": "QuoJS show",
       "ns": "quojs",
       "name": "show",
-      "fn": "input.selection.show()\n"
+      "fn": "$.selection.show()\n"
     },
     {
       "ports": {
@@ -443,7 +443,7 @@
       "description": "QuoJS style",
       "ns": "quojs",
       "name": "style",
-      "fn": "input.selection.style(input.property, input.value)\n"
+      "fn": "$.selection.style($.property, $.value)\n"
     },
     {
       "ports": {
@@ -468,7 +468,7 @@
       "description": "QuoJS text",
       "ns": "quojs",
       "name": "text",
-      "fn": "output.text = input.selection.text()\n"
+      "fn": "output.text = $.selection.text()\n"
     },
     {
       "ports": {
@@ -492,7 +492,7 @@
       "description": "QuoJS toggleClass",
       "ns": "quojs",
       "name": "toggleClass",
-      "fn": "input.selection.toggleClass(input.className)\n"
+      "fn": "$.selection.toggleClass($.className)\n"
     },
     {
       "ports": {
@@ -516,7 +516,7 @@
       "description": "QuoJS val",
       "ns": "quojs",
       "name": "val",
-      "fn": "output.value = input.selection.val()\n"
+      "fn": "output.value = $.create($.selection.val())\n"
     },
     {
       "ports": {
@@ -545,7 +545,7 @@
       "description": "QuoJS vendor",
       "ns": "quojs",
       "name": "vendor",
-      "fn": "input.selection.vendor(input.property, input.value)\n"
+      "fn": "$.selection.vendor($.property, $.value)\n"
     },
     {
       "ports": {
@@ -570,7 +570,7 @@
       "description": "QuoJS width",
       "ns": "quojs",
       "name": "width",
-      "fn": "output.width = input.selection.width()\n"
+      "fn": "output.width = $.create($.selection.width())\n"
     }
   ],
   "twigs": []

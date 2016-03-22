@@ -1,1 +1,3 @@
-$.selection.hide()
+output = function() {
+  $.selection.hide()
+}
