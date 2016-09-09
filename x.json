@@ -11,6 +11,12 @@
   },
   "nodes": [
     {
+      "name": "addClass",
+      "ns": "quojs",
+      "description": "QuoJS addClass",
+      "phrases": {
+        "active": "Adding class {input.className}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -26,15 +32,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Adding class {input.className}"
-      },
-      "description": "QuoJS addClass",
-      "ns": "quojs",
-      "name": "addClass",
       "fn": "output = function() {\n  $.selection.addClass($.className)\n  done()\n}\n"
     },
     {
+      "name": "attr",
+      "ns": "quojs",
+      "description": "QuoJS attr",
+      "phrases": {
+        "active": "Getting Attribute {input.attribute}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -55,15 +61,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting Attribute {input.attribute}"
-      },
-      "description": "QuoJS attr",
-      "ns": "quojs",
-      "name": "attr",
       "fn": "output.value = $.create($.selection.attr($.attribute))\n"
     },
     {
+      "name": "data",
+      "ns": "quojs",
+      "description": "QuoJS data",
+      "phrases": {
+        "active": "Getting Data {input.name}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -84,15 +90,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting Data {input.name}"
-      },
-      "description": "QuoJS data",
-      "ns": "quojs",
-      "name": "data",
       "fn": "output.value = $.create($.selection.data($.name))\n"
     },
     {
+      "name": "hasClass",
+      "ns": "quojs",
+      "description": "QuoJS hasClass",
+      "phrases": {
+        "active": "Determining whether object has class {input.className}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -114,15 +120,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Determining whether object has class {input.className}"
-      },
-      "description": "QuoJS hasClass",
-      "ns": "quojs",
-      "name": "hasClass",
       "fn": "output.ok = $.create($.selection.hasClass($.className))\n"
     },
     {
+      "name": "height",
+      "ns": "quojs",
+      "description": "QuoJS Height",
+      "phrases": {
+        "active": "Measuring Height"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -139,15 +145,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Measuring Height"
-      },
-      "description": "QuoJS Height",
-      "ns": "quojs",
-      "name": "height",
       "fn": "output.height = $.create($.selection.height())\n"
     },
     {
+      "name": "hide",
+      "ns": "quojs",
+      "description": "QuoJS Hide",
+      "phrases": {
+        "active": "Hiding"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -158,15 +164,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Hiding"
-      },
-      "description": "QuoJS Hide",
-      "ns": "quojs",
-      "name": "hide",
       "fn": "output = function() {\n  $.selection.hide()\n}\n"
     },
     {
+      "name": "html",
+      "ns": "quojs",
+      "description": "QuoJS html",
+      "phrases": {
+        "active": "Getting element's HTML"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -183,15 +189,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting element's HTML"
-      },
-      "description": "QuoJS html",
-      "ns": "quojs",
-      "name": "html",
       "fn": "output.html = $.create($.selection.html())\n"
     },
     {
+      "name": "remove",
+      "ns": "quojs",
+      "description": "QuoJS remove",
+      "phrases": {
+        "active": "Removing element(s)"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -202,15 +208,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Removing element(s)"
-      },
-      "description": "QuoJS remove",
-      "ns": "quojs",
-      "name": "remove",
       "fn": "output = function() {\n  $.selection.remove()\n}\n"
     },
     {
+      "name": "removeClass",
+      "ns": "quojs",
+      "description": "QuoJS removeClass",
+      "phrases": {
+        "active": "Removing class {input.className}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -226,19 +232,18 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Removing class {input.className}"
-      },
-      "description": "QuoJS removeClass",
-      "ns": "quojs",
-      "name": "removeClass",
       "fn": "$.selection.removeClass($.className)\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "quoque": "psichi/quoque"
-        }
+      "name": "select",
+      "ns": "quojs",
+      "description": "QuoJS selector",
+      "expose": [
+        "window",
+        "document"
+      ],
+      "phrases": {
+        "active": "Selecting {input.selector}"
       },
       "ports": {
         "input": {
@@ -255,19 +260,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Selecting {input.selector}"
+      "dependencies": {
+        "npm": {
+          "quoque": "psichi/quoque"
+        }
       },
-      "expose": [
-        "window",
-        "document"
-      ],
-      "description": "QuoJS selector",
-      "ns": "quojs",
-      "name": "select",
       "fn": "output.selection = $.create(quoque($.selector))\n"
     },
     {
+      "name": "setAttr",
+      "ns": "quojs",
+      "description": "QuoJS setAttr",
+      "phrases": {
+        "active": "Setting Attribute {input.attribute}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -288,15 +294,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Setting Attribute {input.attribute}"
-      },
-      "description": "QuoJS setAttr",
-      "ns": "quojs",
-      "name": "setAttr",
       "fn": "$.selection.attr($.attribute, $.value)\n"
     },
     {
+      "name": "setData",
+      "ns": "quojs",
+      "description": "QuoJS setData",
+      "phrases": {
+        "active": "Setting Data {input.name}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -317,15 +323,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Setting Data {input.name}"
-      },
-      "description": "QuoJS setData",
-      "ns": "quojs",
-      "name": "setData",
       "fn": "$.selection.data($.name, $.value)\n"
     },
     {
+      "name": "setHtml",
+      "ns": "quojs",
+      "description": "QuoJS setHtml",
+      "phrases": {
+        "active": "Setting element's HTML"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -341,15 +347,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Setting element's HTML"
-      },
-      "description": "QuoJS setHtml",
-      "ns": "quojs",
-      "name": "setHtml",
       "fn": "$.selection.html($.html)\n"
     },
     {
+      "name": "setText",
+      "ns": "quojs",
+      "description": "QuoJS setText",
+      "phrases": {
+        "active": "Setting element's text"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -365,15 +371,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Setting element's text"
-      },
-      "description": "QuoJS setText",
-      "ns": "quojs",
-      "name": "setText",
       "fn": "$.selection.text($.text)\n"
     },
     {
+      "name": "setVal",
+      "ns": "quojs",
+      "description": "QuoJS setVal",
+      "phrases": {
+        "active": "Setting Value"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -389,15 +395,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Setting Value"
-      },
-      "description": "QuoJS setVal",
-      "ns": "quojs",
-      "name": "setVal",
       "fn": "$.selection.val($.value)\n"
     },
     {
+      "name": "show",
+      "ns": "quojs",
+      "description": "QuoJS show",
+      "phrases": {
+        "active": "Showing"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -408,15 +414,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Showing"
-      },
-      "description": "QuoJS show",
-      "ns": "quojs",
-      "name": "show",
       "fn": "$.selection.show()\n"
     },
     {
+      "name": "style",
+      "ns": "quojs",
+      "description": "QuoJS style",
+      "phrases": {
+        "active": "Styling element {{input.property}}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -437,15 +443,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Styling element {{input.property}}"
-      },
-      "description": "QuoJS style",
-      "ns": "quojs",
-      "name": "style",
       "fn": "$.selection.style($.property, $.value)\n"
     },
     {
+      "name": "text",
+      "ns": "quojs",
+      "description": "QuoJS text",
+      "phrases": {
+        "active": "Getting element's text"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -462,15 +468,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting element's text"
-      },
-      "description": "QuoJS text",
-      "ns": "quojs",
-      "name": "text",
       "fn": "output.text = $.selection.text()\n"
     },
     {
+      "name": "toggleClass",
+      "ns": "quojs",
+      "description": "QuoJS toggleClass",
+      "phrases": {
+        "active": "Toggling class {input.className}"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -486,15 +492,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Toggling class {input.className}"
-      },
-      "description": "QuoJS toggleClass",
-      "ns": "quojs",
-      "name": "toggleClass",
       "fn": "$.selection.toggleClass($.className)\n"
     },
     {
+      "name": "val",
+      "ns": "quojs",
+      "description": "QuoJS val",
+      "phrases": {
+        "active": "Getting Value"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -510,15 +516,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting Value"
-      },
-      "description": "QuoJS val",
-      "ns": "quojs",
-      "name": "val",
       "fn": "output.value = $.create($.selection.val())\n"
     },
     {
+      "name": "vendor",
+      "ns": "quojs",
+      "description": "QuoJS vendor",
+      "phrases": {
+        "active": "Applying {{input.property}} to element"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -539,15 +545,15 @@
         },
         "output": {}
       },
-      "phrases": {
-        "active": "Applying {{input.property}} to element"
-      },
-      "description": "QuoJS vendor",
-      "ns": "quojs",
-      "name": "vendor",
       "fn": "$.selection.vendor($.property, $.value)\n"
     },
     {
+      "name": "width",
+      "ns": "quojs",
+      "description": "QuoJS width",
+      "phrases": {
+        "active": "Measuring width"
+      },
       "ports": {
         "input": {
           "selection": {
@@ -564,14 +570,7 @@
           }
         }
       },
-      "phrases": {
-        "active": "Measuring width"
-      },
-      "description": "QuoJS width",
-      "ns": "quojs",
-      "name": "width",
       "fn": "output.width = $.create($.selection.width())\n"
     }
-  ],
-  "twigs": []
+  ]
 }
